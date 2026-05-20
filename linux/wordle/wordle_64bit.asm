@@ -68,6 +68,8 @@ _start:           ; NOT A FUNCTION (no ret, since nothing to return to)
     call loadAllWords
     call randomComputerWord
 
+    ; TODO: loop this WORD_SIZE=5 times (5 tries to user to guess word)
+
     ; userWord = finput(STDIN, userWord, WORD_SIZE)
     mov rax, SYS_READ
     mov rdi, STDIN
